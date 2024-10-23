@@ -1,0 +1,147 @@
+
+<div class="max-w-sm mx-auto">
+  <label for="resistance-colors" class="block mb-2 text-sm font-medium
+   text-gray-900 dark:text-white">Seleccione los colores de las resistencias</label>
+
+  <div class="flex space-x-4">
+    <!-- Selector de Banda 1 -->
+    <form>
+      <label for="resistance-colors" class="block mb-2 text-sm font-medium
+   text-gray-900 dark:text-white">Primera banda</label>
+      <select id="banda1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Color Banda 1</option>
+        <option value="negro">Negro</option>
+        <option value="marron">Marrón</option>
+        <option value="rojo">Rojo</option>
+        <option value="naranja">Naranja</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="violeta">Violeta</option>
+        <option value="gris">Gris</option>
+        <option value="blanco">Blanco</option>
+      </select>
+    </form>
+
+    <!-- Selector de Banda 2 -->
+    <form>
+      <label for="resistance-colors" class="block mb-2 text-sm font-medium
+   text-gray-900 dark:text-white">Segunda banda</label>
+      <select id="banda2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Color Banda 2</option>
+        <option value="negro">Negro</option>
+        <option value="marron">Marrón</option>
+        <option value="rojo">Rojo</option>
+        <option value="naranja">Naranja</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="violeta">Violeta</option>
+        <option value="gris">Gris</option>
+        <option value="blanco">Blanco</option>
+      </select>
+    </form>
+
+    <!-- Selector de Banda 3 -->
+    <form>
+      <label for="resistance-colors" class="block mb-2 text-sm font-medium
+   text-gray-900 dark:text-white">Tercera banda</label>
+      <select id="banda3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Color Banda 3</option>
+        <option value="negro">Negro</option>
+        <option value="marron">Marrón</option>
+        <option value="rojo">Rojo</option>
+        <option value="naranja">Naranja</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="violeta">Violeta</option>
+        <option value="gris">Gris</option>
+        <option value="blanco">Blanco</option>
+        <option value="dorado">Dorado</option>
+        <option value="plateado">Plateado</option>
+      </select>
+    </form>
+  </div>
+</div>
+
+
+<label for="resistance-colors" class="block mb-2 text-sm font-medium
+   text-gray-900 dark:text-white">Tolerancias</label>
+<!--Radio boton-->   
+<div class="flex items-center mb-4">
+  <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+  <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Oro</label>
+</div>
+<div class="flex items-center">
+  <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+  <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Plata</label>
+</div>
+
+<!--Boton de registro Mejorar boton para guardar-->
+<!-- <button 
+type="button"
+(click)="imprimir()"></button>
+class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+  Registrar
+  </span>
+</button> -->
+<!--Guardar-->
+
+<!--tabla de colores-->  
+
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          Color 1
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Color 2
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Color 3
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Tolerancia
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Valor
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Valor Máximo
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Valor Mínimo
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let resistencia of resistencias" class="border-b border-gray-200 dark:border-gray-700">
+        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+          {{ resistencia.color1 }}
+        </td>
+        <td class="px-6 py-4">
+          {{ resistencia.color2 }}
+        </td>
+        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+          {{ resistencia.color3 }}
+        </td>
+        <td class="px-6 py-4">
+          {{ resistencia.tolerancia }}
+        </td>
+        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+          {{ resistencia.valor }}
+        </td>
+        <td class="px-6 py-4">
+          {{ resistencia.valorMaximo }}
+        </td>
+        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+          {{ resistencia.valorMinimo }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

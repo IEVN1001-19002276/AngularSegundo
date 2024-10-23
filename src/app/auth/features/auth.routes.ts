@@ -1,8 +1,12 @@
-import { Route }from "@angular/router";
+import { Routes } from "@angular/router";
 
 export default [
     {
-        path: 'auth',
-        loadChildren:() => import('./auth.module').then(m => m.AuthModule)
-    }
-];
+        path: 'sign-in',
+        loadComponent: () => import('./sign-in/sign-in.component'),
+    },
+    {
+        path: 'sign-up',
+        loadComponent: () => import('./sign-up/sign-up.component'),
+    },
+]as Routes
