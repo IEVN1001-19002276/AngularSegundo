@@ -6,9 +6,8 @@ import { Injectable } from '@angular/core';
 export class MessageserviceService {
 
   constructor() { }
-  alumnos:string[]=['a','b','c'];
-
-  add(alumno:string){
+  alumnos:string[] = [];
+  add(alumno: string){
     this.alumnos.push(alumno);
   }
 }

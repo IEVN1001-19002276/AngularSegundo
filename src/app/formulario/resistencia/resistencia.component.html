@@ -1,147 +1,101 @@
+<div class="max-w-4xl mx-auto bg-white shadow-md rounded p-6">
+        
+  <form [formGroup]="formulario">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div>
+              <label for="color1" class="block text-gray-700 mb-2">Primera Banda</label>
+              <select id="color1" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="banda1" formControlName="banda1">
+                  <option value="0">Negro</option>
+                  <option value="1">Café</option>
+                  <option value="2">Rojo</option>
+                  <option value="3">Naranja</option>
+                  <option value="4">Amarillo</option>
+                  <option value="5">Verde</option>
+                  <option value="6">Azul</option>
+                  <option value="7">Violeta</option>
+                  <option value="8">Gris</option>
+                  <option value="9">Blanco</option>
+              </select>
+          </div>
+          <div>
+              <label for="color2" class="block text-gray-700 mb-2">Segunda Banda</label>
+              <select id="color2" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="banda2" formControlName="banda2">
+                  <option value="0">Negro</option>
+                  <option value="1">Café</option>
+                  <option value="2">Rojo</option>
+                  <option value="3">Naranja</option>
+                  <option value="4">Amarillo</option>
+                  <option value="5">Verde</option>
+                  <option value="6">Azul</option>
+                  <option value="7">Violeta</option>
+                  <option value="8">Gris</option>
+                  <option value="9">Blanco</option>
+              </select>
+          </div>
+          <div>
+              <label for="color3" class="block text-gray-700 mb-2">Tercera Banda</label>
+              <select id="color3" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" name="banda3" formControlName="banda3">
+                  <option value="1">Negro</option>
+                  <option value="10">Café</option>
+                  <option value="100">Rojo</option>
+                  <option value="1000">Naranja</option>
+                  <option value="10000">Amarillo</option>
+                  <option value="100000">Verde</option>
+                  <option value="1000000">Azul</option>
+                  <option value="10000000">Violeta</option>
+                  <option value="100000000">Gris</option>
+                  <option value="1000000000">Blanco</option>
+              </select>
+          </div>
+      </div>
 
-<div class="max-w-sm mx-auto">
-  <label for="resistance-colors" class="block mb-2 text-sm font-medium
-   text-gray-900 dark:text-white">Seleccione los colores de las resistencias</label>
+      <div class="mb-6">
+          <label class="block text-gray-700 mb-2">Tolerancia</label>
+          <div class="flex flex-col space-y-4"> <!-- Modificación aquí -->
+              <div class="flex items-center">
+                  <input class="form-radio text-blue-500" type="radio" name="tolerancia" id="toleranciaOro" formControlName="tolerancia" value="oro">
+                  <label class="ml-2 text-gray-700" for="toleranciaOro">Oro - 5%</label>
+              </div>
+              <div class="flex items-center">
+                  <input class="form-radio text-blue-500" type="radio" name="tolerancia" id="toleranciaPlata" formControlName="tolerancia" value="plata">
+                  <label class="ml-2 text-gray-700" for="toleranciaPlata">Plata - 10%</label>
+              </div>
+          </div>
+      </div>
 
-  <div class="flex space-x-4">
-    <!-- Selector de Banda 1 -->
-    <form>
-      <label for="resistance-colors" class="block mb-2 text-sm font-medium
-   text-gray-900 dark:text-white">Primera banda</label>
-      <select id="banda1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Color Banda 1</option>
-        <option value="negro">Negro</option>
-        <option value="marron">Marrón</option>
-        <option value="rojo">Rojo</option>
-        <option value="naranja">Naranja</option>
-        <option value="amarillo">Amarillo</option>
-        <option value="verde">Verde</option>
-        <option value="azul">Azul</option>
-        <option value="violeta">Violeta</option>
-        <option value="gris">Gris</option>
-        <option value="blanco">Blanco</option>
-      </select>
-    </form>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="generaTolerancia()">Registrar</button>
+  </form>
+  
+  <br>
+  <hr>
+  <h1>Acciones</h1>
+  <br>
+  <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="dameData()">Imprimir</button>
+  <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-2" (click)="limpiar()">Limpiar</button>
 
-    <!-- Selector de Banda 2 -->
-    <form>
-      <label for="resistance-colors" class="block mb-2 text-sm font-medium
-   text-gray-900 dark:text-white">Segunda banda</label>
-      <select id="banda2" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Color Banda 2</option>
-        <option value="negro">Negro</option>
-        <option value="marron">Marrón</option>
-        <option value="rojo">Rojo</option>
-        <option value="naranja">Naranja</option>
-        <option value="amarillo">Amarillo</option>
-        <option value="verde">Verde</option>
-        <option value="azul">Azul</option>
-        <option value="violeta">Violeta</option>
-        <option value="gris">Gris</option>
-        <option value="blanco">Blanco</option>
-      </select>
-    </form>
-
-    <!-- Selector de Banda 3 -->
-    <form>
-      <label for="resistance-colors" class="block mb-2 text-sm font-medium
-   text-gray-900 dark:text-white">Tercera banda</label>
-      <select id="banda3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Color Banda 3</option>
-        <option value="negro">Negro</option>
-        <option value="marron">Marrón</option>
-        <option value="rojo">Rojo</option>
-        <option value="naranja">Naranja</option>
-        <option value="amarillo">Amarillo</option>
-        <option value="verde">Verde</option>
-        <option value="azul">Azul</option>
-        <option value="violeta">Violeta</option>
-        <option value="gris">Gris</option>
-        <option value="blanco">Blanco</option>
-        <option value="dorado">Dorado</option>
-        <option value="plateado">Plateado</option>
-      </select>
-    </form>
-  </div>
-</div>
-
-
-<label for="resistance-colors" class="block mb-2 text-sm font-medium
-   text-gray-900 dark:text-white">Tolerancias</label>
-<!--Radio boton-->   
-<div class="flex items-center mb-4">
-  <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-  <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Oro</label>
-</div>
-<div class="flex items-center">
-  <input checked id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-  <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Plata</label>
-</div>
-
-<!--Boton de registro Mejorar boton para guardar-->
-<!-- <button 
-type="button"
-(click)="imprimir()"></button>
-class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-  Registrar
-  </span>
-</button> -->
-<!--Guardar-->
-
-<!--tabla de colores-->  
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead class="text-xs text-gray-700 uppercase dark:text-gray-400">
-      <tr>
-        <th scope="col" class="px-6 py-3">
-          Color 1
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Color 2
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Color 3
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Tolerancia
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Valor
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Valor Máximo
-        </th>
-        <th scope="col" class="px-6 py-3">
-          Valor Mínimo
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let resistencia of resistencias" class="border-b border-gray-200 dark:border-gray-700">
-        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-          {{ resistencia.color1 }}
-        </td>
-        <td class="px-6 py-4">
-          {{ resistencia.color2 }}
-        </td>
-        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-          {{ resistencia.color3 }}
-        </td>
-        <td class="px-6 py-4">
-          {{ resistencia.tolerancia }}
-        </td>
-        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-          {{ resistencia.valor }}
-        </td>
-        <td class="px-6 py-4">
-          {{ resistencia.valorMaximo }}
-        </td>
-        <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-          {{ resistencia.valorMinimo }}
-        </td>
-      </tr>
-    </tbody>
+  <table class="w-full mt-8 table-auto border-collapse" *ngIf="dataList">
+      <thead class="bg-gray-200">
+          <tr>
+              <th class="border px-4 py-2">Banda 1</th>
+              <th class="border px-4 py-2">Banda 2</th>
+              <th class="border px-4 py-2">Banda 3</th>
+              <th class="border px-4 py-2">Tolerancia</th>
+              <th class="border px-4 py-2">Valor</th>
+              <th class="border px-4 py-2">Valor Máximo</th>
+              <th class="border px-4 py-2">Valor Mínimo</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let data of dataList">
+              <td class="border px-4 py-2" [style.background]="data.estiloBanda1">{{data.banda1}}</td>
+              <td class="border px-4 py-2" [style.background]="data.estiloBanda2">{{data.banda2}}</td>
+              <td class="border px-4 py-2" [style.background]="data.estiloBanda3">{{data.banda3}}</td>
+              <td class="border px-4 py-2" [style.background]="data.coloresTolerancia">{{data.tolerancia}}</td>
+              <td class="border px-4 py-2">{{ohm}}</td>
+              <td class="border px-4 py-2">{{toleranciaFinal}}</td>
+              <td class="border px-4 py-2">{{toleranciaFinalMin}}</td>
+          </tr>
+      </tbody>
   </table>
+  <H1 *ngIf="resultado">{{resultado}}</H1>
 </div>

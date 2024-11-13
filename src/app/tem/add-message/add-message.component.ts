@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {MessageserviceService} from '../messageservice.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ListMessageComponent } from "../list-message/list-message.component";
 
 @Component({
   selector: 'app-add-message',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ListMessageComponent],
   templateUrl: './add-message.component.html',
   styles: ``
 })
@@ -17,14 +18,15 @@ export class AddMessageComponent{
   }
   initForm(): FormGroup {
     return this.fb.group({
-      nombre [''],
+      nombre: [''],
     });
   }
-  constructor(public messageService: MessageService, private readonly fb: FormBuilder) {}
+  constructor(public messageService: MessageserviceService, private readonly fb: FormBuilder) {}
   alumno: string = "";
   addAlumno(){
-    let {nombre}= this.formGroup.value;
-    this.messageService.add(this.alumno);
-    this.alumno="";
+    let {nombre} = this.formGroup.value;
+    this.messageService.add(nombre)
+    this.formGroup.get('nombre')?.setValue('');
   }
 }
+
