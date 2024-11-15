@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-alumnos',
   standalone: true,
-  import: [FormsModule,AlumnoFilterPipe, CommonModule,RouterLink],
+  imports: [FormsModule,AlumnoFilterPipe, CommonModule,RouterLink],
  
   templateUrl: './alumnos.component.html',
   styles: ``
